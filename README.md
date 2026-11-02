@@ -9,6 +9,10 @@ photography, mono labels, and one bright spot of teal. It is *inspired by* the
 minimal direct-to-consumer language of sites like Yeezy.com; no proprietary
 code, copy, or assets from that site are used.
 
+<!-- live-links -->
+**Project page:** [gitguy268.github.io/blacklabspots-storefront](https://gitguy268.github.io/blacklabspots-storefront/)
+<!-- /live-links -->
+
 <!-- run-steps:start -->
 ## Run it locally, step by step
 

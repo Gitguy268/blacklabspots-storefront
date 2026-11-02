@@ -9,6 +9,34 @@ photography, mono labels, and one bright spot of teal. It is *inspired by* the
 minimal direct-to-consumer language of sites like Yeezy.com; no proprietary
 code, copy, or assets from that site are used.
 
+<!-- run-steps:start -->
+## Run it locally, step by step
+
+1. **Install [Node.js](https://nodejs.org) 22** or newer and [pnpm](https://pnpm.io/installation).
+
+2. **Get the code:**
+
+   ```sh
+   git clone https://github.com/Gitguy268/blacklabspots-storefront.git
+   cd blacklabspots-storefront
+   ```
+
+3. **Install the dependencies and copy the example settings:**
+
+   ```sh
+   pnpm install
+   cp .env.example .env.local
+   ```
+
+4. **Start it:**
+
+   ```sh
+   pnpm dev
+   ```
+
+5. **Open <http://localhost:3000/>.** Without Stripe keys the checkout runs in preview mode and charges nobody.
+<!-- run-steps:end -->
+
 ## Stack
 
 - Next.js 15.5 (App Router) + React 19 + TypeScript

@@ -54,7 +54,7 @@ export function ShopControls({ total }: { total: number }) {
             defaultValue={query}
             placeholder="Search the shop"
             aria-label="Search the shop"
-            className="w-44 bg-transparent font-mono text-[11px] uppercase tracking-[0.08em] outline-none placeholder:text-smoke/70"
+            className="w-44 bg-transparent font-mono text-[11px] uppercase tracking-[0.08em] outline-hidden placeholder:text-smoke/70"
           />
           <button
             type="submit"
@@ -64,12 +64,12 @@ export function ShopControls({ total }: { total: number }) {
           </button>
         </form>
 
-        <label className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.1em] text-smoke">
+        <label className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-smoke">
           <span className="sr-only">Sort products</span>
           <select
             value={sort}
             onChange={(event) => update({ sort: event.target.value })}
-            className="cursor-pointer border border-line bg-paper px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-ink outline-none"
+            className="cursor-pointer border border-line bg-paper px-2 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-ink outline-hidden"
           >
             {SORTS.map((option) => (
               <option key={option.value} value={option.value}>

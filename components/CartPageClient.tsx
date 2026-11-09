@@ -77,7 +77,7 @@ export function CartPageClient() {
                     Personalization: “{item.personalization}”
                   </p>
                 ) : null}
-                <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.1em] text-smoke">
+                <p className="mt-1 font-mono text-[9px] uppercase tracking-widest text-smoke">
                   Made to order · Ships in 4–10 business days
                 </p>
 

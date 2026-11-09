@@ -135,7 +135,7 @@ export function SuccessClient() {
       </p>
 
       <div className="mx-auto mt-8 max-w-md border border-line bg-white/40 p-5 text-left">
-        <div className="flex justify-between border-b border-line pb-3 font-mono text-[10px] uppercase tracking-[0.1em]">
+        <div className="flex justify-between border-b border-line pb-3 font-mono text-[10px] uppercase tracking-widest">
           <span className="text-smoke">Order</span>
           <span>{orderNumber}</span>
         </div>
@@ -185,7 +185,7 @@ export function SuccessClient() {
                 <span>{formatPrice(order.total)}</span>
               </div>
             </div>
-            <div className="mt-3 flex justify-between gap-3 font-mono text-[9px] uppercase tracking-[0.1em] text-smoke">
+            <div className="mt-3 flex justify-between gap-3 font-mono text-[9px] uppercase tracking-widest text-smoke">
               <span>Customer email</span>
               <span className="normal-case tracking-normal">{order.email}</span>
             </div>

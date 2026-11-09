@@ -78,7 +78,7 @@ export default async function CollectionPage({
       <div className="flex flex-wrap gap-2 py-5">
         <Link
           href="/shop"
-          className="border border-line px-3 py-2 font-mono text-[10px] uppercase tracking-[0.1em] transition-colors hover:border-ink"
+          className="border border-line px-3 py-2 font-mono text-[10px] uppercase tracking-widest transition-colors hover:border-ink"
         >
           All
         </Link>
@@ -86,7 +86,7 @@ export default async function CollectionPage({
           <Link
             key={filter}
             href={`/collections/${filter}`}
-            className={`border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.1em] transition-colors ${
+            className={`border px-3 py-2 font-mono text-[10px] uppercase tracking-widest transition-colors ${
               filter === slug
                 ? "border-ink bg-ink text-paper"
                 : "border-line hover:border-ink"

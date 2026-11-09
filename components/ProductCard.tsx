@@ -24,7 +24,7 @@ export function ProductCard({
     <article className="group relative">
       <Link
         href={`/products/${product.slug}`}
-        className="relative block aspect-[4/5] overflow-hidden bg-white"
+        className="relative block aspect-4/5 overflow-hidden bg-white"
       >
         {primary ? (
           <Image
@@ -46,7 +46,7 @@ export function ProductCard({
           />
         ) : null}
 
-        <span className="absolute left-3 top-3 flex items-center gap-1.5 bg-paper/90 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.12em] text-ink backdrop-blur">
+        <span className="absolute left-3 top-3 flex items-center gap-1.5 bg-paper/90 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.12em] text-ink backdrop-blur-sm">
           {product.category === "home"
             ? "Home"
             : product.category === "apparel"
@@ -84,7 +84,7 @@ export function ProductCard({
           >
             {product.name}
           </Link>
-          <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.1em] text-smoke">
+          <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-smoke">
             Made to order
           </p>
         </div>

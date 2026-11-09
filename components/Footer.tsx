@@ -91,7 +91,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="rounded-sm border border-line bg-white/50 p-5">
+          <div className="rounded-xs border border-line bg-white/50 p-5">
             <div className="flex items-center gap-4">
               <div className="relative size-14 shrink-0 overflow-hidden rounded-full border border-line bg-paper">
                 <Image

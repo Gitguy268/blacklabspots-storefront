@@ -194,7 +194,7 @@ export function ProductPurchase({
                 maxLength={product.personalization?.maxLength ?? 60}
                 rows={2}
                 placeholder="Type here…"
-                className="mt-2 w-full resize-none border border-line bg-white/60 p-3 text-sm outline-none transition-colors placeholder:text-smoke/60 focus:border-ink"
+                className="mt-2 w-full resize-none border border-line bg-white/60 p-3 text-sm outline-hidden transition-colors placeholder:text-smoke/60 focus:border-ink"
               />
               <div className="mt-1 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.08em] text-smoke">
                 <span className="max-w-[45ch] normal-case tracking-normal">
@@ -242,7 +242,7 @@ export function ProductPurchase({
         </button>
       </div>
 
-      <p className="mt-3 font-mono text-[9px] uppercase leading-relaxed tracking-[0.1em] text-smoke">
+      <p className="mt-3 font-mono text-[9px] uppercase leading-relaxed tracking-widest text-smoke">
         Free shipping over $75 · Ships in 4–10 business days · Personalization is
         final sale
       </p>
@@ -305,9 +305,9 @@ export function ProductPurchase({
       </div>
 
       {showSticky ? (
-        <div className="fixed inset-x-0 bottom-0 z-30 flex items-center gap-3 border-t border-line bg-paper/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur lg:hidden">
+        <div className="fixed inset-x-0 bottom-0 z-30 flex items-center gap-3 border-t border-line bg-paper/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-sm lg:hidden">
           <div className="min-w-0 flex-1">
-            <p className="truncate font-mono text-[9px] uppercase tracking-[0.1em] text-smoke">
+            <p className="truncate font-mono text-[9px] uppercase tracking-widest text-smoke">
               {product.name}
             </p>
             <p className="font-mono text-sm tabular-nums">{formatPrice(price)}</p>

@@ -114,7 +114,7 @@ export default function HomePage() {
                 <Link
                   key={product.id}
                   href={`/products/${product.slug}`}
-                  className="group relative aspect-[4/5] overflow-hidden bg-white"
+                  className="group relative aspect-4/5 overflow-hidden bg-white"
                 >
                   <Image
                     src={preferredImage(product)}
@@ -124,7 +124,7 @@ export default function HomePage() {
                     sizes="(min-width: 1024px) 22vw, 50vw"
                     className="object-contain p-2 transition-transform duration-700 ease-swift group-hover:scale-[1.04] md:p-3"
                   />
-                  <span className="absolute bottom-2 left-2 bg-paper/80 px-1.5 py-0.5 font-mono text-[8px] uppercase tracking-[0.1em] text-smoke backdrop-blur">
+                  <span className="absolute bottom-2 left-2 bg-paper/80 px-1.5 py-0.5 font-mono text-[8px] uppercase tracking-widest text-smoke backdrop-blur-sm">
                     0{index + 1}
                   </span>
                 </Link>
@@ -188,7 +188,7 @@ export default function HomePage() {
               href={`/collections/${category.slug}`}
               className="group relative overflow-hidden"
             >
-              <div className="relative aspect-[3/4] bg-white">
+              <div className="relative aspect-3/4 bg-white">
                 <Image
                   src={category.image}
                   alt={category.title}
@@ -197,7 +197,7 @@ export default function HomePage() {
                   className="object-contain p-4 transition-transform duration-700 ease-swift group-hover:scale-[1.04]"
                 />
               </div>
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-paper/95 via-paper/60 to-transparent p-4 pt-16">
+              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-linear-to-t from-paper/95 via-paper/60 to-transparent p-4 pt-16">
                 <div>
                   <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-smoke">
                     0{index + 1} — {category.note}

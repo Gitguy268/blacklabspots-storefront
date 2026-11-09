@@ -47,7 +47,7 @@ export function SizeGuide({ guide }: { guide: SizeGuideType | null }) {
           ))}
         </tbody>
       </table>
-      <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.1em] text-smoke">
+      <p className="mt-3 font-mono text-[9px] uppercase tracking-widest text-smoke">
         Measurements are approximate. When between sizes, size up for a relaxed fit.
       </p>
     </div>

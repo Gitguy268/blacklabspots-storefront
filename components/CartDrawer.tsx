@@ -44,7 +44,7 @@ export function CartDrawer() {
   const shipping = subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : 695;
 
   return (
-    <div className="fixed inset-0 z-[70]" role="dialog" aria-modal="true" aria-label="Shopping cart">
+    <div className="fixed inset-0 z-70" role="dialog" aria-modal="true" aria-label="Shopping cart">
       <button
         type="button"
         className="absolute inset-0 bg-ink/35 backdrop-blur-[2px]"
@@ -179,7 +179,7 @@ export function CartDrawer() {
                 <span>Subtotal</span>
                 <span>{formatPrice(subtotal)}</span>
               </div>
-              <div className="mt-1 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.1em] text-smoke">
+              <div className="mt-1 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-smoke">
                 <span>Shipping</span>
                 <span>{shipping === 0 ? "Free" : formatPrice(shipping)}</span>
               </div>

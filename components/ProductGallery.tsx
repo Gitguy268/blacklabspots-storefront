@@ -83,7 +83,7 @@ export function ProductGallery({
             sizes="(min-width: 1024px) 55vw, 100vw"
             className="object-contain p-4 md:p-8"
           />
-          <span className="absolute bottom-3 left-3 bg-paper/85 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.12em] text-smoke backdrop-blur">
+          <span className="absolute bottom-3 left-3 bg-paper/85 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.12em] text-smoke backdrop-blur-sm">
             {String(active + 1).padStart(2, "0")} / {String(shown.length).padStart(2, "0")}
           </span>
         </div>

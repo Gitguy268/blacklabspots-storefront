@@ -51,7 +51,7 @@ export default async function ShopPage({
           <Link
             key={filter.href}
             href={filter.href}
-            className={`border px-3 py-2 font-mono text-[10px] uppercase tracking-[0.1em] transition-colors ${
+            className={`border px-3 py-2 font-mono text-[10px] uppercase tracking-widest transition-colors ${
               index === 0
                 ? "border-ink bg-ink text-paper"
                 : "border-line hover:border-ink"

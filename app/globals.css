@@ -1,6 +1,41 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #0a0a0a;
+  --color-paper: #f7f5f0;
+  --color-bone: #edeae3;
+  --color-smoke: #6f6c64;
+  --color-line: #d8d4ca;
+  --color-spot: #2cbbc3;
+  --color-spot-dark: #12747a;
+
+  --font-sans: var(--font-display), Arial, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --tracking-tightest: -0.055em;
+
+  --container-page: 1680px;
+
+  --ease-swift: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 :root {
   color-scheme: light;
@@ -8,18 +43,35 @@
   --ink: #0a0a0a;
 }
 
-* {
-  box-sizing: border-box;
-}
+/*
+  Element defaults live in the base layer so Tailwind v4 utilities (which are
+  layered) still override them, as they did in v3.
+*/
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
 
-body {
-  @apply bg-paper text-ink antialiased;
-  font-feature-settings: "ss01" 1, "cv01" 1;
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-feature-settings: "ss01" 1, "cv01" 1;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
 }
 
 .font-display {
@@ -39,17 +91,6 @@ body {
 summary:focus-visible {
   outline: 1px solid #2cbbc3;
   outline-offset: 4px;
-}
-
-input,
-textarea,
-select,
-button {
-  font: inherit;
-}
-
-input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
 }
 
 .link-underline {

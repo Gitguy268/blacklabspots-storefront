@@ -161,7 +161,7 @@ export function CheckoutForm({ stripeEnabled }: { stripeEnabled: boolean }) {
             autoComplete="email"
             value={customer.email}
             onChange={(event) => update("email", event.target.value)}
-            className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-none transition-colors focus:border-ink"
+            className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-hidden transition-colors focus:border-ink"
             placeholder="you@gooddog.com"
           />
         </label>
@@ -186,7 +186,7 @@ export function CheckoutForm({ stripeEnabled }: { stripeEnabled: boolean }) {
                   autoComplete="given-name"
                   value={customer.firstName}
                   onChange={(event) => update("firstName", event.target.value)}
-                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-none focus:border-ink"
+                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-hidden focus:border-ink"
                 />
               </label>
               <label>
@@ -198,7 +198,7 @@ export function CheckoutForm({ stripeEnabled }: { stripeEnabled: boolean }) {
                   autoComplete="family-name"
                   value={customer.lastName}
                   onChange={(event) => update("lastName", event.target.value)}
-                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-none focus:border-ink"
+                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-hidden focus:border-ink"
                 />
               </label>
               <label className="sm:col-span-2">
@@ -210,7 +210,7 @@ export function CheckoutForm({ stripeEnabled }: { stripeEnabled: boolean }) {
                   autoComplete="address-line1"
                   value={customer.address1}
                   onChange={(event) => update("address1", event.target.value)}
-                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-none focus:border-ink"
+                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-hidden focus:border-ink"
                 />
               </label>
               <label>
@@ -222,7 +222,7 @@ export function CheckoutForm({ stripeEnabled }: { stripeEnabled: boolean }) {
                   autoComplete="address-level2"
                   value={customer.city}
                   onChange={(event) => update("city", event.target.value)}
-                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-none focus:border-ink"
+                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-hidden focus:border-ink"
                 />
               </label>
               <label>
@@ -233,7 +233,7 @@ export function CheckoutForm({ stripeEnabled }: { stripeEnabled: boolean }) {
                   autoComplete="address-level1"
                   value={customer.region}
                   onChange={(event) => update("region", event.target.value)}
-                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-none focus:border-ink"
+                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-hidden focus:border-ink"
                 />
               </label>
               <label>
@@ -245,7 +245,7 @@ export function CheckoutForm({ stripeEnabled }: { stripeEnabled: boolean }) {
                   autoComplete="postal-code"
                   value={customer.postalCode}
                   onChange={(event) => update("postalCode", event.target.value)}
-                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-none focus:border-ink"
+                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-hidden focus:border-ink"
                 />
               </label>
               <label>
@@ -255,7 +255,7 @@ export function CheckoutForm({ stripeEnabled }: { stripeEnabled: boolean }) {
                 <select
                   value={customer.country}
                   onChange={(event) => update("country", event.target.value)}
-                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-none focus:border-ink"
+                  className="mt-1 w-full border-b border-line bg-transparent py-2 text-sm outline-hidden focus:border-ink"
                 >
                   {COUNTRIES.map(([code, name]) => (
                     <option key={code} value={code}>
@@ -295,7 +295,7 @@ export function CheckoutForm({ stripeEnabled }: { stripeEnabled: boolean }) {
               ? `Continue to payment — ${formatPrice(total)}`
               : `Place preview order — ${formatPrice(total)}`}
         </button>
-        <p className="mt-3 text-center font-mono text-[9px] uppercase leading-relaxed tracking-[0.1em] text-smoke">
+        <p className="mt-3 text-center font-mono text-[9px] uppercase leading-relaxed tracking-widest text-smoke">
           {stripeEnabled
             ? "Secure checkout by Stripe · Card details stay with Stripe"
             : "Preview mode · Add Stripe keys to accept real payments"}

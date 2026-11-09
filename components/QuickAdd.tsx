@@ -22,7 +22,7 @@ export function QuickAdd({ item }: QuickAddProps) {
     <button
       type="button"
       onClick={() => addItem(item)}
-      className="flex size-9 items-center justify-center border border-ink/15 bg-paper/95 text-ink backdrop-blur transition-colors hover:border-ink hover:bg-ink hover:text-paper"
+      className="flex size-9 items-center justify-center border border-ink/15 bg-paper/95 text-ink backdrop-blur-sm transition-colors hover:border-ink hover:bg-ink hover:text-paper"
       aria-label={`Quick add ${item.name}`}
     >
       <PlusIcon className="size-4" />
